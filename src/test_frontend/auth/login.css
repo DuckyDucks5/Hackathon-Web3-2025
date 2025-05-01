@@ -1,5 +1,5 @@
-body {
-    font-family: 'Segoe UI', sans-serif;
+  body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     display: flex;
     height: 100vh;
@@ -23,25 +23,39 @@ body {
     margin-right: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
+    width: 766px;
   }
   
-  .left img {
-    max-width: 300px;
-  }
-  
+ 
   .right {
     flex: 1;
-    padding: 50px;
+    margin-left: 133px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
   }
   
+  .right h2{
+    color: #004AAD;
+    margin: 0px;
+    font-size: 36px;
+  }
+
+  .right p{
+    padding-top: 10px;
+    font-size: 20px;
+  }
+
   input {
     padding: 10px;
-    margin: 10px 0;
-    width: 100%;
+    margin: 0px 0px 25px 0px;
+    width: 70%;
+    height: 50px;
+    border: 1px solid #ABABAB;
+    border-radius: 10px;
     box-sizing: border-box;
+    outline: none;
   }
   
   button {
@@ -50,5 +64,7 @@ body {
     border: none;
     color: white;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 30px;
+    width: 70%;
+    height: 60px;
   }

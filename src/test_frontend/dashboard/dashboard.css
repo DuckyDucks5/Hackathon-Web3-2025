@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
   
   body {
@@ -11,27 +11,144 @@
   
   .container {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
   }
   
   .sidebar {
-    width: 60px;
-    background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100px;
+    background-color: #f8f8f8;
+    padding: 0.5rem 0.8rem;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    z-index: 1000;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
+
   }
   
+  .sidebar.active {
+    left: 0;
+    width: 330px;
+  }
+
+  .top {
+    display: flex;
+    margin-left: 10px;
+    margin-top: 43px;
+    cursor: pointer;
+    align-items: center;
+  }
+
+  .expand-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    gap: 100px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .sidebar.active .expand-logo {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+  }
+
+  .sidebar ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    text-align: center; 
+  }
+  
+  .sidebar ul li:hover {
+    background-color: #eaeaea;
+  }
+
+  .sidebar ul li i {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .sidebar ul li span {
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .sidebar.active ul li span {
+    opacity: 1;
+  }
+
+  .sidebar ul li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    padding: 5px 25px;
+    color: black;
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  .sidebar ul li a:hover {
+    background-color: #eaeaea;
+  }
+
+  .sidebar ul li a i {
+    font-size: 1.2rem;
+    min-width: 24px;
+    text-align: center;
+
+  }
+
+  .sidebar ul li a img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    display: block;
+  }
+  
+  .sidebar ul li a span.nav-item {
+    display: block;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .sidebar.active ul li a span.nav-item {
+    opacity: 1;
+  }
+
+  .main-content {
+    flex: 1;
+    padding: 80px 40px 40px 40px;
+    overflow-y: auto;
+    position: relative;
+    z-index: 0;
+    transition: margin-left 0.3s ease;
+    margin-left: 100px;
+  }
+
   .menu-icons {
     font-size: 24px;
     margin: 20px 0;
     cursor: pointer;
-  }
-  
-  .logo {
-    width: 30px;
-    margin-bottom: 20px;
   }
   
   .header {
@@ -40,7 +157,6 @@
     align-items: center;
     background-color: #fff;
     padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     position: fixed;
     top: 0;
     left: 0;
@@ -73,12 +189,6 @@
     background-color: #0052cc;
     border-radius: 50%;
     box-shadow: 0 0 4px rgba(0,0,0,0.1);
-  }
-  
-  .main-content {
-    flex: 1;
-    padding: 80px 40px 40px 40px;
-    overflow-y: auto;
   }
   
   .welcome-section {
