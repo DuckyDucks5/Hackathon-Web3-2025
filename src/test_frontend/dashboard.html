@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
 
     <div class="container">
         <aside class="sidebar">
-            <img src="assets/logo biru.svg" alt="">
-            <nav>
-                <img src="assets/courses.svg" alt="">
-                <img src="assets/dashboard (1).svg" alt="">
-                <img src="assets/achievements.svg" alt="">
-                <img src="assets/logout.svg" alt="">
+            <img src="assets/logo biru.svg" alt="logo" class="logo">
+            <nav class="menu-icons">
+                <img src="assets/dashboard (1).svg" alt="dashboard" class="dashboard">
+                <img src="assets/courses.svg" alt="courses" class="courses">
+                <img src="assets/achievements.svg" alt="achievements" class="achievements">
+                <img src="assets/logout.svg" alt="logout" class="logout">
             </nav>
         </aside>
 
@@ -25,10 +26,40 @@
                     <h2>Welcome to NCourage</h2>
                     <p>Find interesting courses that coost up your skills!</p>
                     <button class="exploreCourses">Explore Courses</button>
-
                 </div>
-                <img src="assets/DASHBOARD.svg" alt="">
+                <img src="assets/DASHBOARD.svg" alt="banner" class="banner">
+                <div class="icons">
+                    <img src="assets/lonceng.svg" alt="lonceng">
+                    <img src="assets/setting.svg" alt="setting">
+                </div>
             </header>
+
+                        <!-- Popular Now -->
+                <section class="section">
+                    <h3>Popular Right Now</h3>
+                    <div class="cards">
+                    <!-- Repeat this card -->
+                    <div class="card">
+                        <!-- <img src="orange.jpg" alt="Course" /> -->
+                        <h4>Learn lorem ipsum dolor apa sit amet blablabla</h4>
+                        <p>By Google</p>
+                        <div class="bottom">
+                        <button>Start Course</button>
+                        <span>Free</span>
+                        </div>
+                    </div>
+                    <!-- 3 more cards similar -->
+                    </div>
+                </section>
+
+                <!-- Top Courses -->
+                <section class="section">
+                    <h3>Top Courses This Week</h3>
+                    <!-- You can continue adding cards here -->
+                </section>
+                </main>
+            </div>
+
         </main>
     </div>
 
