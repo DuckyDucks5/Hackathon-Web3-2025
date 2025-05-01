@@ -3,18 +3,28 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+  <!-- <link rel="icon" type="image/svg+xml" href="/favicon.ico" /> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IC Hello Starter</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <div class="browser-warning">
-    ⚠️ If this page appears broken, try reloading. If the problem persists, try switching browsers; Chrome or
-    Firefox are recommended.
+  <div class="container">
+    <div class="left">
+      <img src="assets/logo biru.svg" alt="NCourage Logo" class="NCourgeLogo"/>
+      <h2>NCourage</h2>
+    </div>
+    <div class="right">
+      <h2>Login</h2>
+      <p>Join us and grab your NFT!</p>
+      <input type="email" id="email" placeholder="Email" />
+      <input type="text" id="username" placeholder="Username atau Phone Number?" />
+      <input type="password" id="password" placeholder="Password" />
+      <button id="loginButton" onclick="login()">Login</button>
+    </div>
   </div>
-  <div id="root"></div>
-  <script type="module" src="/src/main.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>

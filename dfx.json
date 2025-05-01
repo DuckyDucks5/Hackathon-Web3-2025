@@ -16,14 +16,11 @@
       "type": "motoko"
     },
     "test_frontend": {
+      "source":  ["src/test_frontend"],
+      "type": "assets",
       "dependencies": [
         "test_backend"
-      ],
-      "source": [
-        "src/test_frontend/dist"
-      ],
-      "type": "assets",
-      "workspace": "test_frontend"
+      ]
     }
   },
   "defaults": {
