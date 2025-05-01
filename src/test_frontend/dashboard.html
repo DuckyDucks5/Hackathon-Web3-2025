@@ -1,67 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="dashboard.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
 </head>
 <body>
-
-    <div class="container">
-        <aside class="sidebar">
-            <img src="assets/logo biru.svg" alt="logo" class="logo">
-            <nav class="menu-icons">
-                <img src="assets/dashboard (1).svg" alt="dashboard" class="dashboard">
-                <img src="assets/courses.svg" alt="courses" class="courses">
-                <img src="assets/achievements.svg" alt="achievements" class="achievements">
-                <img src="assets/logout.svg" alt="logout" class="logout">
-            </nav>
-        </aside>
-
-        <main class="main-content">
-            <header class="header">
-                <div class="welcome">
-                    <h1>Hello, Username!</h1>
-                    <h2>Welcome to NCourage</h2>
-                    <p>Find interesting courses that coost up your skills!</p>
-                    <button class="exploreCourses">Explore Courses</button>
-                </div>
-                <img src="assets/DASHBOARD.svg" alt="banner" class="banner">
-                <div class="icons">
-                    <img src="assets/lonceng.svg" alt="lonceng">
-                    <img src="assets/setting.svg" alt="setting">
-                </div>
-            </header>
-
-                        <!-- Popular Now -->
-                <section class="section">
-                    <h3>Popular Right Now</h3>
-                    <div class="cards">
-                    <!-- Repeat this card -->
-                    <div class="card">
-                        <!-- <img src="orange.jpg" alt="Course" /> -->
-                        <h4>Learn lorem ipsum dolor apa sit amet blablabla</h4>
-                        <p>By Google</p>
-                        <div class="bottom">
-                        <button>Start Course</button>
-                        <span>Free</span>
-                        </div>
-                    </div>
-                    <!-- 3 more cards similar -->
-                    </div>
-                </section>
-
-                <!-- Top Courses -->
-                <section class="section">
-                    <h3>Top Courses This Week</h3>
-                    <!-- You can continue adding cards here -->
-                </section>
-                </main>
-            </div>
-
-        </main>
+  <header class="header">
+    <div class="header-icons">
+      <div class="icon"><img src="assets/lonceng.svg" alt="lonceng" /></div>
+      <div class="icon"><img src="assets/setting.svg" alt="setting" /></div>
+      <div class="profile"></div>
     </div>
+  </header>
 
+  <div class="container">
+    <aside class="sidebar">
+      <img src="assets/logo biru.svg" alt="logo" class="logo" />
+      <nav class="menu-icons">
+        <img src="assets/dashboard (1).svg" alt="dashboard" class="dashboard" /><br />
+        <img src="assets/courses.svg" alt="courses" class="courses" /><br />
+        <img src="assets/achievements.svg" alt="achievements" class="achievements" /><br />
+        <img src="assets/logout.svg" alt="logout" class="logout" />
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="welcome-section">
+        <div class="welcome">
+          <h1>Hello, Username!</h1>
+          <h2>Welcome to иCourage</h2>
+          <p>Find interesting courses that boost up your skills!</p>
+          <button class="exploreCourses">Explore Courses</button>
+        </div>
+        <img src="assets/DASHBOARD.svg" alt="banner" class="banner" />
+      </div>
+
+      <!-- Popular Section -->
+      <section class="section">
+        <h3>Popular Right Now</h3>
+        <div class="cards">
+          <div class="card">
+            <img src="assets/orange.jpg" alt="Course" />
+            <h4>Learn lorem ipsum dolor apa sit amet blablabla</h4>
+            <p>By Google</p>
+            <div class="bottom">
+              <button>Start Course</button>
+              <span>Free</span>
+            </div>
+          </div>
+          <div class="card">
+            <img src="assets/orange.jpg" alt="Course" />
+            <h4>Learn lorem ipsum dolor apa sit amet blablabla</h4>
+            <p>By Google</p>
+            <div class="bottom">
+              <button>Start Course</button>
+              <span>Free</span>
+            </div>
+          </div>
+          <div class="card">
+            <img src="assets/orange.jpg" alt="Course" />
+            <h4>Learn lorem ipsum dolor apa sit amet blablabla</h4>
+            <p>By Google</p>
+            <div class="bottom">
+              <button>Start Course</button>
+              <span>Free</span>
+            </div>
+          </div>
+          <div class="card">
+            <img src="assets/orange.jpg" alt="Course" />
+            <h4>Learn lorem ipsum dolor apa sit amet blablabla</h4>
+            <p>By Google</p>
+            <div class="bottom">
+              <button>Buy Course</button>
+              <span>$12</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Top Courses Section -->
+      <section class="section">
+        <h3>Top Courses This Week</h3>
+        <!-- Tambahkan konten lainnya di sini -->
+      </section>
+    </main>
+  </div>
 </body>
 </html>
