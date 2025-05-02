@@ -281,53 +281,70 @@
   .cards {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap;
+    margin-top: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
   }
+
+  .cards::-webkit-scrollbar {
+    display: none;
+  }
+  
   
   .card {
     background: #fff;
-    padding: 15px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    width: 200px;
+    width: 300px; 
+    text-align: left;
+    flex-shrink: 0;
   }
   
   .card img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
   }
   
   .card h4 {
-    margin: 10px 0 5px 0;
+    margin: 10px;
     font-size: 14px;
   }
   
   .card p {
+    margin: 10px;
     font-size: 12px;
     color: #666;
   }
   
   .bottom {
-    margin-top: 10px;
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
   }
   
   .bottom button {
-    padding: 6px 10px;
+    padding: 10px 15px;
     font-size: 12px;
     background-color: #4f81ff;
     color: white;
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    margin: 10px;
+  }
+
+  .bottom button:hover {
+    background-color: #e0e0e0;
+    color: grey
   }
   
   .bottom span {
     font-size: 12px;
     font-weight: bold;
     color: #333;
+    margin: 10px;
   }
 
   .dashboard {
