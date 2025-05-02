@@ -1,32 +1,53 @@
-// import { createActor } from "../declarations/your_backend";
-// import { AuthClient } from "@dfinity/auth-client";
+let loginStep = 1; // step 1: login plug, step 2: isi username
 
-// let actor;
+async function connectAndRedirect() {
+  if (!window.ic || !window.ic.plug) {
+    alert("Plug Wallet belum terpasang!");
+    return;
+  }
 
-// async function login() {
+  const whitelist = ["vizcg-th777-77774-qaaea-cai"];
+  const host = "https://mainnet.dfinity.network";
+
+  try {
+    const connected = await window.ic.plug.requestConnect({ whitelist, host });
+
+    if (connected) {
+      const principal = await window.ic.plug.getPrincipal();
+      document.getElementById("principalid").classList.add("hide-input");
+      document.getElementById("password").classList.add("hide-input");
+
+      const usernameInput = document.getElementById("username");
+      const usernameWrapper = document.getElementById("username-wrapper");
+      const form = document.querySelector("form");
+      setTimeout(() => {
+        usernameWrapper.classList.add("show");
+        form.classList.add("username-phase"); // <== tambahkan class ini
+      }, 500);
+
+      loginStep = 2;
+    }
+  } catch (e) {
+    console.error("Gagal connect ke Plug:", e);
+    alert("Gagal connect ke Plug Wallet.");
+  }
+}
 
 
-//   return alert("Login function called");
-//   const authClient = await AuthClient.create();
-//   await authClient.login({
-//     identityProvider: "https://identity.ic0.app/#authorize",
-//     onSuccess: async () => {
-//       const identity = authClient.getIdentity();
-//       actor = createActor(import.meta.env.CANISTER_ID_YOUR_BACKEND, {
-//         agentOptions: { identity }
-//       });
+function handleLogin(event) {
+  event.preventDefault();
 
-//       const username = document.getElementById("username").value;
-//       const result = await actor.login(username);
-//       alert("Welcome " + result);
-//     },
-//   });
-//}
+  if (loginStep === 1) {
+    connectAndRedirect();
+  } else if (loginStep === 2) {
+    const username = document.getElementById("username").value.trim();
+    if (!username) {
+      alert("Masukkan username terlebih dahulu.");
+      return;
+    }
 
-// document.getElementById('loginButton').addEventListener('click', () => {
-//     alert("Login button clicked");
-// });
+    document.cookie = `username=${encodeURIComponent(username)}; path=/; max-age=3600`; // expires after 1 hour
 
-async function login() {
-    window.location.href = "dashboard.html";
+    window.location.href = "/dashboard/dashboard.html";
+  }
 }

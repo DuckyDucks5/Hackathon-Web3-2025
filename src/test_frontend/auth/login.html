@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <link rel="icon" type="image/svg+xml" href="/favicon.ico" /> -->
+  <link href="https://fonts.gstatic.com/s/poppins/v23/pxiEyp8kv8JHgFVrJJnecmNE.woff2" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="left">
+      <img src="/assets/logo-biru.svg" alt="NCourage Logo" class="NCourgeLogo"/>   
+    </div>
+    <div class="right">
+      <h2>Login</h2>
+      <p>Join us and grab your NFT!</p>
+      <form onsubmit="handleLogin(event)">
+          <!-- Step 1 -->
+          <div class="login-step1-wrapper">
+            <input type="text" id="principalid" placeholder="Principal ID" />
+            <input type="password" id="password" placeholder="Password" />
+            <button type="submit" id="login-btn-step1">Login</button>
+          </div>
+
+          <!-- Step 2 -->
+          <div id="username-wrapper" class="username-wrapper">
+            <input type="text" id="username" placeholder="Username" />
+            <button type="submit">Login</button>
+          </div>
+      </form>
+      
+    </div>
+  </div>
+  <script src="/main.js"></script>
+</body>
+
+</html>
