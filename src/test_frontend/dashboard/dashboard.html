@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="dashboard.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
@@ -45,7 +45,7 @@
           </a>
         </li>
         <li>
-          <a href="#" class="logout">
+          <a href="#" class="logout-btn">
             <img src="/assets/logout.svg" alt="logout"/>
             <span class="nav-item">Logout</span>
           </a>
@@ -59,12 +59,14 @@
         <div class="header-icons">
           <div class="icon"><img src="/assets/lonceng.svg" alt="lonceng" /></div>
           <div class="icon"><img src="/assets/setting.svg" alt="setting" /></div>
-          <div class="profile"></div>
+          <div class="profile">
+            <div class="profile-img"></div>
+          </div>
         </div>
       </div> 
       <div class="welcome-section">
         <div class="welcome">
-          <h1>Hello, Username!</h1>
+          <h1>Hello, <span class="usnPlug"></span></h1>
           <h2>Welcome to иCourage</h2>
           <p>Find interesting courses that boost up your skills!</p>
           <button class="exploreCourses">Explore Courses</button>
@@ -124,5 +126,5 @@
   </div>
 </body>
 
-<script src="dashboard.js"></script>
+<script type="module" src="dashboard.js"></script>
 </html>
