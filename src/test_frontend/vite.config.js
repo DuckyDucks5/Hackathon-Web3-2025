@@ -27,6 +27,7 @@ function getHtmlEntries(dir) {
 export default defineConfig({
   build: {
     emptyOutDir: true,
+    
     rollupOptions: {
       input: getHtmlEntries(__dirname),
     },

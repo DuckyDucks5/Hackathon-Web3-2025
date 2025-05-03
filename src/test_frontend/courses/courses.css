@@ -1,0 +1,420 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #fefefe;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100px;
+  background-color: #f8f8f8;
+  padding: 0.5rem 0.8rem;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  z-index: 1000;
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  bottom: 0; 
+}
+
+.sidebar.active {
+  left: 0;
+  width: 330px;
+}
+
+.top {
+  display: flex;
+  margin-left: 10px;
+  margin-top: 43px;
+  cursor: pointer;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.expand-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  gap: 100px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+.sidebar.active .expand-logo {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.expand-logo .logo-text {
+  font-weight: 500;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 25px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  text-align: center;
+  height: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.sidebar ul li:hover {
+  background-color: #eaeaea;
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: black;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.sidebar ul li a:hover {
+  background-color: #eaeaea;
+}
+
+.sidebar ul li a i {
+  min-width: 24px;
+  text-align: center;
+}
+
+.sidebar ul li a img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
+}
+
+.sidebar ul li a span.nav-item {
+  display: block;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin-left: 20px;
+}
+
+.sidebar.active ul li a span.nav-item {
+  opacity: 1;
+}
+
+.menu-items {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: black;
+  background-color: transparent; 
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.logout-btn:hover {
+  background-color: #eaeaea;
+}
+
+.logout-btn img {
+  width: 20px;
+  height: 20px;
+  display: block;
+  object-fit: contain; 
+}
+
+
+.main-content {
+  flex: 1;
+  padding: 80px 40px 40px 40px;
+  overflow-y: auto;
+  position: relative;
+  z-index: 0;
+  transition: margin-left 0.3s ease;
+  margin-left: 100px;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  height: 60px;
+  width: calc(100% - 100px);
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-right: 40px;
+}
+
+.icon {
+  background-color: white;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.25);
+  cursor: pointer;
+}
+
+.icon img {
+  height: 16px;
+  width: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 32px;
+  border-radius: 32.5px;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(0,0,0,0.25);
+  z-index: 1;
+  overflow: hidden;
+}
+
+.profile .profile-img {
+  background-color: #4f81ff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.courses-container {
+  margin-top: 20px;
+}
+
+.courses-container h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.course-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  width: 250px;
+  text-align: left;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.course-item:hover {
+  transform: translateY(-2px);
+}
+
+.course-item img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.course-item h2 {
+  margin: 11.3px 25px;
+  font-size: 12px;
+}
+
+.course-item .provider {
+  margin: 0px 56px;
+  font-size: 12px;
+  color: #666;
+}
+
+.course-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.course-action .start-btn{
+  padding: 10px 15px;
+  font-size: 12px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 20px 25px;
+  background-color: #5493F3;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.course-action .buy-btn {
+  padding: 10px 15px;
+  font-size: 12px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 20px 25px;
+  background-color: #004AAD;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.course-action .start-btn:hover{
+  background-color: #ECECEC;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.course-action .buy-btn:hover {
+  background-color: #ECECEC;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.price-free {
+    font-size: 13px;
+    font-weight: 500;
+    color: #5493F3;
+    margin: 24px 25px;
+}
+
+.price-buy {
+  font-size: 13px;
+  font-weight: 500;
+  color: #004AAD;
+  margin: 24px 25px;
+}
+
+/* Add these new styles */
+.courses-header {
+  margin-bottom: 30px;
+}
+
+.search-filter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  opacity: 0.6;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  padding: 8px 0;
+}
+.filter-tabs {
+  display: flex;
+  gap: 16px; /* Slightly reduced gap for better proportions */
+  margin-top: 12px;
+}
+
+.filter-tab {
+  background: none;
+  border: none;
+  padding: 8px 16px; /* Added horizontal padding for better click area */
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  border-radius: 20px; /* Full pill shape instead of 20% */
+}
+
+.filter-tab.active {
+  background-color: #4f81ff; /* Using your existing blue color */
+  color: #ffffff; /* Pure white for better contrast */
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(79, 129, 255, 0.2); /* Subtle shadow */
+}
+
+.filter-tab:hover:not(.active) {
+  color: #4f81ff;
+  background-color: rgba(79, 129, 255, 0.1); /* Light blue hover */
+}
+
+/* Add progress indicator for in-progress courses */
+.progress-indicator {
+  display: none; /* Hidden by default */
+  font-size: 12px;
+  color: #4f81ff;
+  margin-top: 5px;
+}
+
+.course-item.in-progress .progress-indicator {
+  display: block;
+}

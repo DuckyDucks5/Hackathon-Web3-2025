@@ -16,17 +16,21 @@
       "type": "motoko"
     },
     "test_frontend": {
-      "source":  ["src/test_frontend"],
+      "source": ["src/test_frontend"],
       "type": "assets",
-      "dependencies": [
-        "test_backend"
-      ]
+      "dependencies": ["test_backend"]
     }
   },
   "defaults": {
     "build": {
       "args": "",
       "packtool": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:4943",
+      "type": "ephemeral"
     }
   },
   "output_env_file": ".env",

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Courses</title>
+  <link rel="stylesheet" href="courses.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+
+    <div class="sidebar">
+        <div class="top">
+          <div class="btn">
+            <img src="/logo biru.svg" alt="logo" id="logo-img"/>
+          </div>
+          <div class="expand-logo btn">
+            <span class="logo-text">ИCourage</span>
+            <img src="/back.svg" alt="">
+          </div>
+        </div>
+      
+        <ul>
+          <div class="menu-items"> <!-- Tambahkan ini -->
+            <li>
+              <a href="#">
+                <img src="/dashboard (1).svg" alt="dashboard"/>
+                <span class="nav-item">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="/courses.svg" alt="courses"/>
+                <span class="nav-item">Courses</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="/achievements.svg" alt="achievements"/>
+                <span class="nav-item">Achievements</span>
+              </a>
+            </li>
+          </div>
+      
+          <li class="logout"> <!-- Biarkan logout di luar .menu-items -->
+            <a href="#" class="logout-btn">
+              <img src="/logout.svg" alt="logout"/>
+              <span class="nav-item">Logout</span>
+            </a>
+          </li>
+        </ul>
+    </div>
+
+    <main class="main-content">
+      <div class="header">
+        <div class="header-icons">
+          <div class="icon"><img src="/lonceng.svg" alt="notification" /></div>
+          <div class="icon"><img src="/setting.svg" alt="settings" /></div>
+          <div class="profile">
+            <div class="profile-img"></div>
+          </div>
+        </div>
+      </div> 
+      
+      <div class="courses-container">
+        <div class="courses-header">
+            <h1>Explore Courses</h1>
+            <div class="search-filter-container">
+              <div class="search-bar">
+                <img src="/search.svg" alt="Search" class="search-icon">
+                <input type="text" placeholder="Search courses..." id="searchInput">
+              </div>
+              <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">Explore Courses</button>
+                <button class="filter-tab" data-filter="progress">In Progress</button>
+              </div>
+            </div>
+        </div>
+        
+        <div class="course-list">
+          <div class="course-item">
+            <img src="/Course_Excel.svg" alt="">
+            <h2>Mastering Microsoft Excel Formulas and Function</h2>
+            <p class="provider">Google</p>
+            <div class="course-action">
+              <button class="start-btn">Start Course</button>
+              <span class="price-free">Free</span>
+            </div>
+          </div>
+          
+          <div class="course-item">
+            <img src="/Course_BusinessCommunication.svg" alt="">
+            <h2>Business Communication Skills: Handling Clients & Customers</h2>
+            <p class="provider">Google</p>
+            <div class="course-action">
+              <button class="start-btn">Start Course</button>
+              <span class="price-free">Free</span>
+            </div>
+          </div>
+          
+          <div class="course-item">
+            <img src="/Course_PPT.svg" alt="">
+            <h2>Create Professional PowerPoint: From Beginner to Expert</h2>
+            <p class="provider">Google</p>
+            <div class="course-action">
+              <button class="start-btn">Start Course</button>
+              <span class="price-free">Free</span>
+            </div>
+          </div>
+          
+          <div class="course-item">
+            <img src="/Course_Marketing.svg" alt="">
+            <h2>Business Fundamentals: Marketing Strategy</h2>
+            <p class="provider">Google</p>
+            <div class="course-action">
+              <button class="start-btn">Start Course</button>
+              <span class="price-free">Free</span>
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="course-list">
+            <div class="course-item">
+                <img src="/Course_GraphicDesign.svg" alt="">
+                <h2>Become a Professional Graphic Designer</h2>
+                <p class="provider">Google</p>
+                <div class="course-action">
+                  <button class="start-btn">Start Course</button>
+                  <span class="price-free">Free</span>
+                </div>
+            </div>
+              
+            <div class="course-item">
+                <img src="/Course_WebDev.svg" alt="">
+                <h2>Become a WEB Developer from Scratch, step by step Guide</h2>
+                <p class="provider">Google</p>
+                <div class="course-action">
+                  <button class="buy-btn">Buy Course</button>
+                  <span class="price-buy">$3.59</span>
+                </div>
+            </div>
+              
+            <div class="course-item">
+                <img src="/Course_Cyber.svg" alt="">
+                <h2>Cyber Security Course: Ethical Hacking & Defense</h2>
+                <p class="provider">AWS</p>
+                <div class="course-action">
+                  <button class="buy-btn">Buy Course</button>
+                  <span class="price-buy">$5</span>
+                </div>
+            </div>
+
+            <div class="course-item">
+                <img src="/Course_LaptopCash.svg" alt="">
+                <h2>Earn Passive Income: Turn Your Laptop Into a Cash Generator</h2>
+                <p class="provider">AWS</p>
+                <div class="course-action">
+                  <button class="buy-btn">Buy Course</button>
+                  <span class="price-buy">$10</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-list">
+            <div class="course-item">
+                <img src="/Course_DataAnalyst.svg" alt="">
+                <h2>The Data Analyst Course: Complete Bootcamp</h2>
+                <p class="provider">Google</p>
+                <div class="course-action">
+                  <button class="buy-btn">Buy Course</button>
+                  <span class="price-buy">$15</span>
+                </div>
+            </div>
+              
+            <div class="course-item">
+                <img src="/Course_UIUX.svg" alt="">
+                <h2>Complete Figma Megacourse: UI/UX Design Beginner to Expert</h2>
+                <p class="provider">AWS</p>
+                <div class="course-action">
+                  <button class="buy-btn">Buy Course</button>
+                  <span class="price-buy">$19.9</span>
+                </div>
+            </div>
+              
+            <div class="course-item">
+                <img src="/Course_React.svg" alt="">
+                <h2>The Ultimate React Course: React, Next.js, Redux & More</h2>
+                <p class="provider">AWS</p>
+                <div class="course-action">
+                  <button class="buy-btn">Buy Course</button>
+                  <span class="price-buy">$22</span>
+                </div>
+            </div>
+
+            <div class="course-item">
+                <img src="/Course_AI.svg" alt="">
+                <h2>LLM Engineering: Master AI, Large Language Models & Agents</h2>
+                <p class="provider">Google</p>
+                <div class="course-action">
+                  <button class="buy-btn">Buy Course</button>
+                  <span class="price-buy">$25</span>
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+  <script src="courses.js"></script>
+</body>
+</html>

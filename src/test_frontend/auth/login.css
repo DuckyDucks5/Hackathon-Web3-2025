@@ -63,7 +63,7 @@
   
   /* untuk efek geser keluar */
   .hide-input {
-    transform: translateX(-150%);
+    transform: translateX(-10%);
     opacity: 0;
   }
   
