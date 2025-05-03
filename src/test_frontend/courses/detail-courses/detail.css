@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body, html {
+    background-color: #F8F8F8;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  #fixed-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .detail-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .container-header {
+    padding: 20px 65px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .header img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  
+  .header h2 {
+    font-weight: 600;
+    font-size: 24px;
+  }
+  
+  
+  .provider {
+      display: flex;
+      align-items: center;
+      margin: 15px 41px;
+    }
+    
+    .provider img {
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+    }
+    
+    .provider-name {
+        font-size: 14px;
+    }
+    
+    .main-content {
+      position: absolute;
+      top: 360px; /* kira-kira tinggi gambar + header */
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow-y: auto;
+    }
+
+    .detail-container {
+        background-color: #FFFFFF;
+        border-radius: 24px;
+        margin: 0px 118px 20px 118px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        max-width: 1204px;
+        height: auto;
+    }
+
+    .content-detail {
+        padding: 40px 40px;
+    }
+    
+    .content-detail .header-detail {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .content-detail .list-detail {
+        margin: 30px 15px;
+    }
+
+    .continue{
+        display: flex;
+        align-content: center;
+        justify-content: flex-end;
+        margin: 50px 55px;
+    }
+    .continue-btn{ 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 55px;
+        background-color: #5493F3;
+        border-radius: 12px;
+        text-decoration: none;
+        color: #FFFFFF;
+        font-size: 15px;
+        width: 180px;
+        height: 55px;
+        right: 0;
+    }
+
+    .continue-btn:hover {
+        background-color: #ECECEC;
+        color: rgba(0, 0, 0, 0.75);
+    }
+  

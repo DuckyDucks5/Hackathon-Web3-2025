@@ -169,7 +169,7 @@ body {
 
 .main-content {
   flex: 1;
-  padding: 80px 40px 40px 40px;
+  padding: 80px 40px 40px 0px;
   overflow-y: auto;
   position: relative;
   z-index: 0;
@@ -182,20 +182,18 @@ body {
   justify-content: flex-end;
   align-items: center;
   background-color: #fff;
-  padding: 10px 0;
   position: fixed;
   top: 0;
   right: 0;
   z-index: 1000;
   height: 60px;
-  width: calc(100% - 100px);
+  width: 100%;
 }
 
 .header-icons {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-right: 40px;
 }
 
 .icon {
@@ -203,7 +201,6 @@ body {
   border-radius: 50%;
   padding: 8px;
   box-shadow: 0 0 6px rgba(0,0,0,0.25);
-  cursor: pointer;
 }
 
 .icon img {
@@ -222,11 +219,12 @@ body {
   border-radius: 32.5px;
   background-color: #fff;
   box-shadow: 0 0 6px rgba(0,0,0,0.25);
+  margin-right: -20px;
   z-index: 1;
   overflow: hidden;
 }
 
-.profile .profile-img {
+.profile .profile-img{
   background-color: #4f81ff;
   border-radius: 50%;
   width: 20px;
@@ -237,7 +235,7 @@ body {
 }
 
 .courses-container {
-  margin-top: 20px;
+  margin-top: 150px;
 }
 
 .courses-container h1 {
@@ -280,9 +278,20 @@ body {
 }
 
 .course-item .provider {
-  margin: 0px 56px;
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+}
+.course-item .provider .provider-name {
+  margin: 3px 0px 0px 6px;
   font-size: 12px;
   color: #666;
+}
+
+.course-item .provider img {
+  margin: 0px 0px 0px 25px;
+  width: 25px;
+  height: 25px;
 }
 
 .course-action {
@@ -302,6 +311,7 @@ body {
   background-color: #5493F3;
   color: white;
   transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
 }
 
 .course-action .buy-btn {
@@ -314,6 +324,7 @@ body {
   background-color: #004AAD;
   color: white;
   transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
 }
 
 .course-action .start-btn:hover{
@@ -342,7 +353,16 @@ body {
 
 /* Add these new styles */
 .courses-header {
-  margin-bottom: 30px;
+  background-color: #fff;
+  z-index: 1000;
+  width: 100%;
+  position: fixed;
+  top: 40px;
+  height: max-content;
+}
+
+.courses-header .header-2 {
+  margin: 0px 0px 20px 40px;
 }
 
 .search-filter-container {
@@ -416,5 +436,8 @@ body {
 }
 
 .course-item.in-progress .progress-indicator {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
 }

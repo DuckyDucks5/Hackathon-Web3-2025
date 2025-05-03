@@ -93,21 +93,4 @@ document.addEventListener("DOMContentLoaded", () => {
         course.querySelector('.provider').after(progressDiv);
         }
     });
-
-  
-    // Course button functionality
-    const courseButtons = document.querySelectorAll(".start-btn, .buy-btn");
-    courseButtons.forEach(button => {
-      button.addEventListener("click", (e) => {
-        e.preventDefault();
-        const courseItem = e.target.closest(".course-item");
-        const courseTitle = courseItem.querySelector("h2").textContent;
-        
-        if (e.target.classList.contains("start-btn")) {
-          alert(`Starting course: ${courseTitle}`);
-        } else {
-          alert(`Purchasing course: ${courseTitle}`);
-        }
-      });
-    });
   });
