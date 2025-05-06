@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements</title>
+    <link rel="stylesheet" href="achievements-page.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+
+        <div class="sidebar">
+          <div class="top">
+            <div class="btn">
+              <img src="/Hackathon-Web3-2025/src/test_frontend/assets/logo biru.svg" alt="logo" id="logo-img"/>
+            </div>
+            <div class="expand-logo btn">
+              <span class="logo-text">ИCourage</span>
+              <img src="/Hackathon-Web3-2025/src/test_frontend/assets/back.svg" alt="">
+            </div>
+          </div>
+        
+          <ul>
+            <div class="menu-items"> <!-- Tambahkan ini -->
+              <li>
+                <a href="/Hackathon-Web3-2025/src/test_frontend/dashboard.html">
+                  <img src="/Hackathon-Web3-2025/src/test_frontend/assets/dashboard (1).svg" alt="dashboard"/>
+                  <span class="nav-item">Dashboard</span>
+                </a>
+              </li>
+              <li>
+                <a href="/Hackathon-Web3-2025/src/test_frontend/course-page/course-page.html">
+                  <img src="/Hackathon-Web3-2025/src/test_frontend/assets/courses.svg" alt="courses"/>
+                  <span class="nav-item">Courses</span>
+                </a>
+              </li>
+              <li>
+                <a href="/Hackathon-Web3-2025/src/test_frontend/achievements/achievement-page.html">
+                  <img src="/Hackathon-Web3-2025/src/test_frontend/assets/achievements.svg" alt="achievements"/>
+                  <span class="nav-item">Achievements</span>
+                </a>
+              </li>
+            </div>
+        
+            <li class="logout"> <!-- Biarkan logout di luar .menu-items -->
+              <a href="#" class="logout-btn">
+                <img src="/Hackathon-Web3-2025/src/test_frontend/assets/logout.svg" alt="logout"/>
+                <span class="nav-item">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <main class="main-content">
+            <div class="header">
+                <h2>Achievements: NFT Collection</h2>
+              <div class="header-icons">
+                <div class="icon"><img src="/Hackathon-Web3-2025/src/test_frontend/assets/lonceng.svg" alt="lonceng" /></div>
+                <div class="profile">
+                  <div class="profile-img"></div>
+                </div>
+              </div>
+            </div>  
+
+          <div class="container">
+            <div class="nft-grid" id="nftGrid"></div>
+          </div>
+</body>
+    <script src="achievements-page.js"></script>
+</html>
