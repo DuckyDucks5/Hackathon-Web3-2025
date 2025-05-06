@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="detail.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Detail Course</title>
+</head>
+<body>
+    <div id="fixed-top">
+        <img src="/Hackathon-Web3-2025/src/test_frontend/assets/react_panjang.svg" alt="Business Communication" class="detail-image" />
+        <div class="container-header">
+            <div class="header">
+                <img src="/Hackathon-Web3-2025/src/test_frontend/assets/back.svg" alt="Back" id="back-button">
+                <h2>The Ultimate React Course: React, Next.js, Redux & More</h2>
+            </div>
+            <div class="provider">
+                <img src="/Hackathon-Web3-2025/src/test_frontend/assets/aws.svg" alt="">
+                <p class="provider-name">AWS</p>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+
+        <div class="detail-container">
+            <div class="content-detail">
+                <p class="header-detail">Hello! Welcome to the course.</p>
+                <p class="header-detail">Here is some important note you should read first before doing the course</p>
+
+                <ol class="list-detail">
+                    <li>This course has a <strong>30-day validity period</strong>. Please complete all the lessons and activities within 30 days. If not completed within the time limit, your access will expire and the course will be considered inactive.</li>
+                    <li>Make sure to check your progress regularly.</li>
+                    <li>You can always return to the <strong>Course page</strong> to continue where you left off — as long as it's within the 30-day.</li>
+                </ol>
+                  
+                  <p>Upon successful completion of this course, you will receive a unique NFT badge as proof of achievement. This NFT will appear on your <strong>Achievement page</strong>.</p> <br>
+                  
+                  <p>You will also receive a separate e-certificate from our official partner after completion. This certificate is issued <strong>directly by the course provider</strong> and follows their verification process.</p> <br>
+                  
+                  <p>Good Luck and Enjoy Your Learning Session!</p>                  
+            </div>
+
+            <div class="continue">
+                <a href="#" class="continue-btn">Continue</a>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+    <script>
+        document.getElementById("back-button").addEventListener("click", function () {
+            window.location.href = "/Hackathon-Web3-2025/src/test_frontend/course-page/course-page.html";
+        });
+    </script>
+
+</html>
