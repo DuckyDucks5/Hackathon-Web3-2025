@@ -6,7 +6,7 @@ async function connectAndRedirect() {
     return;
   }
 
-  const whitelist = ["vizcg-th777-77774-qaaea-cai"];
+  const whitelist = ["ym2qi-ntlvq-b52zu-mwgjk-wxagt-gjuwb-lwvtq-lnm2q-azi5t-3etnv-oae"];
   const host = "https://mainnet.dfinity.network";
 
   try {
